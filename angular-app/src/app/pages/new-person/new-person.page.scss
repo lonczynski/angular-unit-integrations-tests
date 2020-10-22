@@ -1,0 +1,22 @@
+.new-person-page-container {
+  width: 100%;
+}
+
+.new-person-form-container {
+  & > h3 {
+    font-size: 24px;
+  }
+
+  width: 600px;
+  margin: 32px auto;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: -1px 2px 4px 0px rgba(67, 86, 100, 0.1),
+    -4px 5px 8px 0px rgba(67, 86, 100, 0.12);
+
+  & > form {
+    & > mat-form-field {
+      width: 100%;
+    }
+  }
+}
