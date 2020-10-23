@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Person } from 'src/app/models/person';
-import { PeopleService } from 'src/app/services/people.service';
+import { PeopleService } from 'src/app/services/people/people.service';
 
 @Component({
   selector: 'new-person-page',
@@ -13,7 +14,8 @@ export class NewPersonPage {
 
   constructor(
     private formBuilder: FormBuilder,
-    private peopleService: PeopleService
+    private peopleService: PeopleService,
+    private router: Router
   ) {
     this.ngForm = this.formBuilder.group({
       name: ['', Validators.required],
@@ -35,6 +37,8 @@ export class NewPersonPage {
       };
 
       this.peopleService.addPerson(person);
+
+      this.router.navigateByUrl('/');
     }
   }
 }

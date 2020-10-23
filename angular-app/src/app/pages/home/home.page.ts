@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { Person } from 'src/app/models/person';
-import { PeopleService } from 'src/app/services/people.service';
+import { PeopleService } from 'src/app/services/people/people.service';
 
 @Component({
   selector: 'home-page',
@@ -18,6 +18,10 @@ export class HomePage implements OnDestroy {
 
   public ngOnDestroy() {
     this.peopleSubscription.unsubscribe();
+  }
+
+  public removePerson(person: Person) {
+    this.peopleService.removePerson(person);
   }
 
   private onPeopleChangeHandler() {

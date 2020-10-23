@@ -1,1 +1,17 @@
-<div *ngFor="let person of people">{{ person.name }}</div>
+<div *ngFor="let person of people" class="home-person-card-container">
+  <mat-icon (click)="removePerson(person)">close</mat-icon>
+  <div class="home-person-name-title">{{ person.name }}</div>
+  <div>
+    <label class="home-person-label-title">E-mail:</label> {{ person.email }}
+  </div>
+  <div>
+    <label class="home-person-label-title">Address:</label> {{ person.address }}
+  </div>
+  <div>
+    <label class="home-person-label-title">Birthdate:</label> {{
+    person.birthdate | date }}
+  </div>
+  <div>
+    <label class="home-person-label-title">Phone:</label> {{ person.phone }}
+  </div>
+</div>

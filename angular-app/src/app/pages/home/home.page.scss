@@ -1,0 +1,22 @@
+.home-person-card-container {
+  width: 600px;
+  margin: 32px auto;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: -1px 2px 4px 0px rgba(67, 86, 100, 0.1),
+    -4px 5px 8px 0px rgba(67, 86, 100, 0.12);
+
+  & > mat-icon {
+    float: right;
+    cursor: pointer;
+  }
+}
+
+.home-person-name-title {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.home-person-label-title {
+  font-weight: bold;
+}
